@@ -2,7 +2,7 @@
 <p align="center">一个.py到.exe或.app的可视化转换器，使用简单的图形界面和Python中的<a href="https://www.pyinstaller.org/">PyInstaller</a>。</p>
 
 <p align="center">
-<img src="https://myimages.25531.com/20220728/iShot_2022-07-28_20.48.17.png" style="zoom:50%;"  alt="Empty interface" />
+<img src="https://myimages.25531.com/20220728/iShot_2022-07-28_20.48.17.png" style="zoom:20%;"  alt="Empty interface" />
 </p>
 
 <p align="center">
