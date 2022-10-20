@@ -8,11 +8,9 @@ import os
 import platform
 import subprocess
 
-# yapf: enable
 import qtawesome as qta
 from PySide6.QtCore import Qt, QThread, Signal
-from PySide6.QtGui import QTextCursor
-# yapf: disable
+from PySide6.QtGui import QTextCursor, QScreen
 from PySide6.QtWidgets import QApplication, QFileDialog, QMainWindow, QMessageBox, QTableWidgetItem
 
 from ui import Ui_MainWindow
@@ -32,6 +30,9 @@ class Main_Window(QMainWindow):
         self.ui.setupUi(self)
         # 固定窗口大小
         self.setFixedSize(self.width(), self.height())
+        # 设置窗口在Linux下居中显示,在Windows,MacOS下不需要这2行代码.
+        self.resize(self.width(), self.height())
+        self.center()
         # 设置窗口标题
         self.setWindowTitle(APPNAME + ' ' + VERSION)
         # 绑定源码选择按钮事件
@@ -76,6 +77,14 @@ class Main_Window(QMainWindow):
         self.ui.plainTextEdit.setStyleSheet("QPlainTextEdit{color: #99ff00;background-color: black;}")
         # 初始化线程
         self.work_thread = None
+
+    def center(self):
+        center = QScreen.availableGeometry(QApplication.primaryScreen()).center()  #获取屏幕的中间位置的坐标,center是一个Qpoint对象,在我的屏幕中print的结果是PySide6.QtCore.QPoint(1279, 695)
+        # print(center)
+        geo = self.frameGeometry()  #geo是一个QRect对象:PySide6.QtCore.QRect(0, 0, 533, 741)
+        # print(geo)
+        geo.moveCenter(center)
+        self.move(geo.topLeft())
 
     # 源码选择按钮
     def selectCode(self):
