@@ -79,9 +79,9 @@ class Main_Window(QMainWindow):
         self.work_thread = None
 
     def center(self):
-        center = QScreen.availableGeometry(QApplication.primaryScreen()).center()  #获取屏幕的中间位置的坐标,center是一个Qpoint对象,在我的屏幕中print的结果是PySide6.QtCore.QPoint(1279, 695)
+        center = QScreen.availableGeometry(QApplication.primaryScreen()).center()  # 获取屏幕的中间位置的坐标,center是一个Qpoint对象,在我的屏幕中print的结果是PySide6.QtCore.QPoint(1279, 695)
         # print(center)
-        geo = self.frameGeometry()  #geo是一个QRect对象:PySide6.QtCore.QRect(0, 0, 533, 741)
+        geo = self.frameGeometry()  # geo是一个QRect对象:PySide6.QtCore.QRect(0, 0, 533, 741)
         # print(geo)
         geo.moveCenter(center)
         self.move(geo.topLeft())
