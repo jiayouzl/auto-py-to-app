@@ -69,4 +69,4 @@
 
 ## License
 
-MIT
+MIT.
