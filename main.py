@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # author: Zhang Lei
 # datetime: 2022-08-16 07:41:18
-# software: PyCharm
+# software: PyCharm12345
 
 import json
 import os
@@ -10,8 +10,14 @@ import subprocess
 
 import qtawesome as qta
 from PySide6.QtCore import Qt, QThread, Signal
-from PySide6.QtGui import QTextCursor, QScreen
-from PySide6.QtWidgets import QApplication, QFileDialog, QMainWindow, QMessageBox, QTableWidgetItem
+from PySide6.QtGui import QScreen, QTextCursor
+from PySide6.QtWidgets import (
+    QApplication,
+    QFileDialog,
+    QMainWindow,
+    QMessageBox,
+    QTableWidgetItem,
+)
 
 from ui import Ui_MainWindow
 
