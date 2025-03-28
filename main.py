@@ -43,37 +43,37 @@ class Main_Window(QMainWindow):
         self.setWindowTitle(APPNAME + ' ' + VERSION)
         # 绑定源码选择按钮事件
         self.ui.pushButton_5.clicked.connect(self.selectCode)
-        self.ui.pushButton_5.setIcon(qta.icon('fa.file-code-o'))
+        self.ui.pushButton_5.setIcon(qta.icon('fa5s.file-code'))  # 原 'fa.file-code-o'
         # 绑定资源文件选择按钮事件
         self.ui.pushButton.clicked.connect(self.selectResourceFile)
-        self.ui.pushButton.setIcon(qta.icon('fa.file-o'))
+        self.ui.pushButton.setIcon(qta.icon('fa5s.file'))  # 原 'fa.file-o'
         # 绑定资源文件夹选择按钮事件
         self.ui.pushButton_6.clicked.connect(self.selectResourceFolder)
-        self.ui.pushButton_6.setIcon(qta.icon('fa.folder-o'))
+        self.ui.pushButton_6.setIcon(qta.icon('fa5s.folder'))  # 原 'fa.folder-o'
         # 绑定资源文件/夹移除按钮事件
         self.ui.pushButton_10.clicked.connect(self.deleteResourceFile)
-        self.ui.pushButton_10.setIcon(qta.icon('fa.trash-o'))
+        self.ui.pushButton_10.setIcon(qta.icon('fa5s.trash'))  # 原 'fa.trash-o'
         # 绑定编译输出目录按钮事件
         self.ui.pushButton_11.clicked.connect(self.selectBuildPath)
-        self.ui.pushButton_11.setIcon(qta.icon('fa.folder-o'))
+        self.ui.pushButton_11.setIcon(qta.icon('fa5s.folder'))  # 原 'fa.folder-o'
         # 绑定选择图标按钮事件
         self.ui.pushButton_4.clicked.connect(self.selectIcon)
-        self.ui.pushButton_4.setIcon(qta.icon('fa.file-image-o'))
+        self.ui.pushButton_4.setIcon(qta.icon('fa5s.file-image'))  # 原 'fa.file-image-o'
         # 绑定退出按钮事件
         self.ui.pushButton_3.clicked.connect(self.appExit)
-        self.ui.pushButton_3.setIcon(qta.icon('fa.sign-out'))
+        self.ui.pushButton_3.setIcon(qta.icon('fa5s.sign-out-alt'))  # 原 'fa.sign-out'
         # 绑定编译按钮事件
         self.ui.pushButton_2.clicked.connect(self.build)
-        self.ui.pushButton_2.setIcon(qta.icon('fa.terminal'))
+        self.ui.pushButton_2.setIcon(qta.icon('fa5s.terminal'))  # 原 'fa.terminal'
         # 绑定读取配置按钮事件
         self.ui.pushButton_8.clicked.connect(self.readConfig)
-        self.ui.pushButton_8.setIcon(qta.icon('fa.file-text-o'))
+        self.ui.pushButton_8.setIcon(qta.icon('fa5s.code'))  # 原 'fa.file-text-o'(用法:https://fontawesome.com/icons/code?f=classic&s=solid)
         # 绑定保存配置按钮事件
         self.ui.pushButton_9.clicked.connect(self.saveConfig)
-        self.ui.pushButton_9.setIcon(qta.icon('fa.clipboard'))
+        self.ui.pushButton_9.setIcon(qta.icon('fa5s.clipboard'))  # 原 'fa.clipboard'
         # 绑定生成编译命令按钮事件
         self.ui.pushButton_7.clicked.connect(self.generateBuldCommand)
-        self.ui.pushButton_7.setIcon(qta.icon('fa.pencil'))
+        self.ui.pushButton_7.setIcon(qta.icon('fa5s.pencil-alt'))  # 原 'fa.pencil'
         # 设置表格列宽
         self.ui.tableWidget.setColumnWidth(0, 200)
         self.ui.tableWidget.setColumnWidth(1, 200)
