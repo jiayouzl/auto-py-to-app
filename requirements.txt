@@ -1,2 +1,2 @@
-PySide6==6.10.1
-QtAwesome==1.4.0
+PySide6==6.10.2
+QtAwesome==1.4.1
